@@ -16,7 +16,7 @@ html {
 }
 /*nav bar */
 #nav-bar {
-    height: auto;
+    height: 10%;
     width: 100%;
     position: fixed;
     z-index: 1000;
@@ -26,6 +26,7 @@ html {
     background-color: black;
     left: 0;
     top: 0;
+    height: 100%;
     width: 100%;
     padding: 1rem 1rem;
     display: flex;
@@ -369,6 +370,31 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
+    .nav-bar .nav-stack {
+        display: none;
+    }
+    .nav-bar {
+        width: 100%;
+    }
+    .nav-bar.open .nav-list {
+        transform: translateX(0);
+        position: initial;
+        padding: 0;
+        z-index: initial;
+        background-color: transparent;
+    }
+    .nav-bar .nav-list {
+        transform: translateX(0);
+        position: initial;
+        padding: 0;
+        z-index: initial;
+        background-color: transparent;
+    }
+    .nav-bar .nav-list li {
+        display: inline-block;
+        padding: 0 2rem;
+        float: right;
+    }
     .techniques .technique-info {
         flex-direction: row;
     }
