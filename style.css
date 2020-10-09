@@ -9,25 +9,30 @@ html {
 }
 .container {
     width: 100%;
-    height: auto;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./kaws.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero {
     min-height: 80vh;
     width: 100%;
-    padding-top: 50px;
-    justify-content: center;
-    background: black;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 .hero .hero-info {
     width: 100%;
     text-align: center;
+    margin-bottom: 3rem;
 }
 .hero .hero-info .hero-info-heading {
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: 800;
     color: whitesmoke;
     text-transform: capitalize;
@@ -42,10 +47,11 @@ html {
     margin-top: 30px;
     padding: 1.5rem 4.5rem;
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: uppercase;
     color: white;
     text-decoration: none;
     letter-spacing: .4rem;
     background-color: rgb(85, 85, 85, 0.5);
 }
+
