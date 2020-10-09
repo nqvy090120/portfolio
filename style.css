@@ -31,6 +31,7 @@ html {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
 }
 .nav-bar .nav-stack {
     height: 40px;
@@ -41,12 +42,14 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .nav-bar .nav-stack .bar {
     height: 2px;
     width: 20px;
     background-color: whitesmoke;
     position: relative;
+    transition: 0.2s ease;
 }
 .nav-bar .nav-stack .bar::before,
 .nav-bar .nav-stack .bar::after {
@@ -64,24 +67,44 @@ html {
 .nav-bar .nav-stack .bar::after {
     bottom: 8px;
 }
-.nav-bar ul {
+.nav-bar .nav-stack.active .bar::before{
+    top: 0;
+   transform: rotate(45deg);
+}
+.nav-bar .nav-stack.active .bar::after{
+    top: 0;
+    transform: rotate(-45deg);
+}
+.nav-bar .nav-stack.active .bar {
+    background-color: black;
+}
+.nav-bar .nav-list {
     position: absolute;
     width: 100%;
-    top: 100px;
+    top: 0;
     left: 0;
     text-align: center;
     padding: 3rem 0;
-    background-color: rgba(134, 134, 134, 0.235);
-    /*transform: translateY(-100%);*/
+    background-color: rgba(134, 134, 134);
+    transform: translateY(-100%);
+    transition: 0.3s ease transform;
 }
-.nav-bar ul li {
+.nav-bar.open .nav-list {
+    transform: translateY(60px);
+}
+.nav-bar .nav-list li {
     display: block;
     position: relative;
     text-transform: uppercase;
+    font-weight: bold;
     font-size: 1.2rem;
     letter-spacing: 0.15rem;
     padding: 1rem 0;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+.nav-bar .nav-list li:hover {
+    color: black;
 }
 .hero {
     min-height: 80vh;
