@@ -276,3 +276,9 @@ html {
 .method p {
     font-size: 1.2rem;
 }
+
+@media only screen and (min-width: 768px) {
+    .techniques .technique-info {
+        flex-direction: row;
+    }
+}
