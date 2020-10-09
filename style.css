@@ -252,7 +252,7 @@ html {
 .contact-heading {
     text-transform: capitalize;
     margin: 1rem 4rem;
-    font-size: 1.5em;
+    font-size: 1.2em;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
 }
@@ -280,5 +280,23 @@ html {
 @media only screen and (min-width: 768px) {
     .techniques .technique-info {
         flex-direction: row;
+    }
+    .contact-heading {
+        font-size: 2rem;
+    }
+    .contacts .contact-method {
+        justify-content: space-around;
+        width: 100%;
+        flex-direction: row;
+    }
+    .method {
+        justify-content: center;
+    }
+    .method i {
+        font-size: 2rem;
+        margin: 1rem 2rem;
+    }
+    .method p {
+        font-size: 2rem;
     }
 }
