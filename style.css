@@ -13,10 +13,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./kaws.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .hero {
@@ -25,6 +21,10 @@ html {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./kaws.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .hero .hero-info {
     width: 100%;
@@ -55,3 +55,56 @@ html {
     background-color: rgb(85, 85, 85, 0.5);
 }
 
+.about {
+    width: 100%;
+    flex-direction: column;
+    padding: 10rem 5rem;
+}
+.about .about-info {
+    text-align: center;
+}
+.about .about-info .about-info-heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+.about .about-info .about-info-desc {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin-top: 10px;
+}
+.about .about-info .about-info-button {
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: .7rem 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+.about .about-img .about-img-wrapper {
+    margin-top: 30px;
+    height: auto;
+    max-width: 400px;
+    position: relative;
+    display: inline-block;
+}
+.about .about-img .about-img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+.about .about-img .about-img-wrapper::after {
+    position: absolute;
+    content:'';
+    right: -8%;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 70%;
+    height: 120%;
+    background-color: rgb(33, 33, 34, 0.125);
+    z-index: -1;
+}
